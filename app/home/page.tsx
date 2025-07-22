@@ -20,21 +20,9 @@ export default function Home() {
   ];
 
   const [index, setIndex] = useState(0);
-const [menuOpen, setMenuOpen] = useState(false);
 
   const next = () => setIndex((prev) => (prev + 1) % productImages.length);
-  const prev = () =>
-    setIndex(
-      (prev) => (prev - 1 + productImages.length) % productImages.length
-    );
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex((prevIndex) => (prevIndex + 1) % productImages.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
- 
+  const prev = () => setIndex((prev) => (prev - 1 + productImages.length) % productImages.length);
 
 
 
@@ -68,7 +56,7 @@ const [menuOpen, setMenuOpen] = useState(false);
       </div>
 
       <section className="pagesection">
-        <hr className="section-divider" />
+        
         {/* You can uncomment the below content if needed, after fixing its formatting */}
       </section>
 
